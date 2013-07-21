@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Boids of a feather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+
+            /* Custom container */
+        .container {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        .container > hr {
+            margin: 60px 0;
+        }
+
+            /* Main marketing message and sign up button */
+        .jumbotron {
+            margin: 80px 0;
+            text-align: center;
+        }
+        .jumbotron h1 {
+            font-size: 100px;
+            line-height: 1;
+        }
+        .jumbotron .lead {
+            font-size: 24px;
+            line-height: 1.25;
+        }
+        .jumbotron .btn {
+            font-size: 21px;
+            padding: 14px 24px;
+        }
+
+            /* Supporting marketing content */
+        .marketing {
+            margin: 60px 0;
+        }
+        .marketing p + h4 {
+            margin-top: 28px;
+        }
+
+
+            /* Customize the navbar links to be fill the entire space of the .navbar */
+        .navbar .navbar-inner {
+            padding: 0;
+        }
+        .navbar .nav {
+            margin: 0;
+            display: table;
+            width: 100%;
+        }
+        .navbar .nav li {
+            display: table-cell;
+            width: 1%;
+            float: none;
+        }
+        .flockSort{
+          border: 3px solid black;
+        }
+        .navbar .nav li a {
+            font-weight: bold;
+            text-align: center;
+            border-left: 1px solid rgba(255,255,255,.75);
+            border-right: 1px solid rgba(0,0,0,.1);
+        }
+        .navbar .nav li:first-child a {
+            border-left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .navbar .nav li:last-child a {
+            border-right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="masthead">
+        <h2 class="muted">Boids of a Feather Flock Together!</h2>
+        <div class="navbar">
+        </div><!-- /.navbar -->
+    </div>
+
+    <div class = "span12">
+    <div class="hero-unit">
+        <div id="flockSort"></div>
+    </div>
+        </div>
+    <hr>
+
+    <div class="row-fluid">
+        <div class="span7">
+            <h2>Explanation</h2>
+            <h3> Boids of a feather! </h3>
+            <p>Boids of a feather is a small d3 application that takes a look at swarm interactions.  The idea is to let a boid of the same flock get closer than boids from other flocks, and to only follow/keep up with its flock.  The app randomly places 8 flocks of 20 boids, thus scattering everything.  The boids then try to meet up with only their flock, while giving extra room to anything that is not of the same feather.  Eventually order will reign and all the flocks are nicely clumped until they collide.  The collisions are probably my favorite part and remind me of electron density diagrams. P.S. If you don't like the color of the boids just refresh the page.</p>
+            <h3>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <p>By Jake Grajewski</p>
+    </div>
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"> </script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="boid.js"></script>
+
+</body>
+</html>
